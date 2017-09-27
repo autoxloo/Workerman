@@ -1565,9 +1565,7 @@ class Worker
      */
     public static function safeEcho($msg)
     {
-        if (!function_exists('posix_isatty') || posix_isatty(STDOUT)) {
-            echo $msg;
-        }
+        echo $msg;
     }
 
     /**
